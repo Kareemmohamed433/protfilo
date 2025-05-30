@@ -3,12 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kareem Mohamed | AI & Software Engineer</title>
+  <title>Kareem Mohamed | AI & Software Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Kareem Mohamed, AI & Software Engineer specializing in Machine Learning, Computer Vision, and IoT systems. View my projects and skills.">
+  <meta name="keywords" content="AI Engineer, Machine Learning, Computer Vision, IoT Developer, Python, TensorFlow, Portfolio">
+  <meta name="author" content="Kareem Mohamed">
+  <meta property="og:title" content="Kareem Mohamed | AI & Software Engineer">
+  <meta property="og:description" content="Portfolio of Kareem Mohamed, AI & Software Engineer">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle">
+    <label for="darkModeToggle" class="toggle-label">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+      <span class="toggle-ball"></span>
+    </label>
+  </div>
+
   <!-- Navigation -->
   <nav class="glass-nav">
     <div class="nav-container">
@@ -39,7 +56,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section id="home" class="hero" data-aos="fade-in">
     <div class="hero-content">
       <h1 class="hero-title">
         <span class="highlight">Kareem Mohamed</span>
@@ -58,13 +75,13 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">About <span>Me</span></h2>
       <div class="about-content">
         <div class="about-image">
           <div class="image-wrapper">
-            <img src="person/kareem.jpeg" alt="Kareem Mohamed" class="profile-img">
+            <img src="person/kareem.jpeg" alt="Kareem Mohamed Portrait" class="profile-img" loading="lazy">
             <div class="image-border"></div>
             <div class="image-hover-effect"></div>
           </div>
@@ -108,7 +125,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section bg-light">
+  <section id="projects" class="section bg-light" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">My <span>Projects</span></h2>
       <p class="section-subtitle">A showcase of my recent work and technical capabilities</p>
@@ -117,7 +134,7 @@
         <!-- Face Recognition -->
         <div class="project-card" id="face-project">
           <div class="project-image">
-            <img src="at/1 (1).png" alt="Face Recognition System">
+            <img src="at/1 (1).png" alt="Face Recognition System Screenshot" loading="lazy">
             <div class="project-overlay">
               <a href="https://github.com/Kareemmohamed433/attendanceprogram" target="_blank" class="project-link">
                 <i class="fas fa-code"></i>
@@ -142,19 +159,19 @@
           <div id="face-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="at/1 (1).png" alt="Face Recognition 1"></div>
-              <div class="gallery-item"><img src="at/1 (2).png" alt="Face Recognition 2"></div>
-              <div class="gallery-item"><img src="at/1 (3).png" alt="Face Recognition 3"></div>
-              <div class="gallery-item"><img src="at/1 (4).png" alt="Face Recognition 4"></div>
-              <div class="gallery-item"><img src="at/1 (5).png" alt="Face Recognition 5"></div>
-              <div class="gallery-item"><img src="at/1 (6).png" alt="Face Recognition 6"></div>
-              <div class="gallery-item"><img src="at/1 (7).png" alt="Face Recognition 7"></div>
-              <div class="gallery-item"><img src="at/1 (8).png" alt="Face Recognition 8"></div>
-              <div class="gallery-item"><img src="at/1 (9).png" alt="Face Recognition 9"></div>
-              <div class="gallery-item"><img src="at/1 (10).png" alt="Face Recognition 10"></div>
-              <div class="gallery-item"><img src="at/1 (11).png" alt="Face Recognition 11"></div>
-              <div class="gallery-item"><img src="at/1 (12).png" alt="Face Recognition 12"></div>
-              <div class="gallery-item"><img src="at/1 (13).png" alt="Face Recognition 13"></div>
+              <div class="gallery-item"><img src="at/1 (1).png" alt="Face Recognition 1" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (2).png" alt="Face Recognition 2" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (3).png" alt="Face Recognition 3" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (4).png" alt="Face Recognition 4" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (5).png" alt="Face Recognition 5" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (6).png" alt="Face Recognition 6" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (7).png" alt="Face Recognition 7" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (8).png" alt="Face Recognition 8" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (9).png" alt="Face Recognition 9" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (10).png" alt="Face Recognition 10" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (11).png" alt="Face Recognition 11" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (12).png" alt="Face Recognition 12" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (13).png" alt="Face Recognition 13" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -162,7 +179,7 @@
         <!-- Potato Leaf Detection -->
         <div class="project-card" id="potato-project">
           <div class="project-image">
-            <img src="pota/1.JPG" alt="Potato Leaf Detection">
+            <img src="pota/1.JPG" alt="Potato Leaf Detection" loading="lazy">
             <div class="project-overlay">
               <a href="https://github.com/Kareemmohamed433/detect_potato/blob/main/classfication_the_image.ipynb" target="_blank" class="project-link">
                 <i class="fas fa-code"></i>
@@ -184,7 +201,7 @@
         <!-- ESP32 IoT System -->
         <div class="project-card" id="esp-project">
           <div class="project-image">
-            <img src="iot/1.png" alt="ESP32 IoT System">
+            <img src="iot/1.png" alt="ESP32 IoT System" loading="lazy">
             <div class="project-overlay">
               <a href="https://github.com/Kareemmohamed433/smarthome" target="_blank" class="project-link">
                 <i class="fas fa-code"></i>
@@ -212,8 +229,8 @@
           <div id="iot-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="iot/1.png" alt="IoT System 1"></div>
-              <div class="gallery-item"><img src="iot/2.png" alt="IoT System 2"></div>
+              <div class="gallery-item"><img src="iot/1.png" alt="IoT System 1" loading="lazy"></div>
+              <div class="gallery-item"><img src="iot/2.png" alt="IoT System 2" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -221,7 +238,7 @@
         <!-- Shop Website -->
         <div class="project-card" id="website-project">
           <div class="project-image">
-            <img src="web/1 (2).png" alt="Shop Website">
+            <img src="web/1 (2).png" alt="Shop Website" loading="lazy">
             <div class="project-overlay">
               <a href="https://drive.google.com/drive/folders/1g12XKBTCF49xgMm7xN8OdW4Bq4g0RRQM?usp=sharing" target="_blank" class="project-link">
                 <i class="fas fa-video"></i>
@@ -246,35 +263,35 @@
           <div id="web-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="web/1 (1).png" alt="Shop Website 1"></div>
-              <div class="gallery-item"><img src="web/1 (2).png" alt="Shop Website 2"></div>
-              <div class="gallery-item"><img src="web/1 (3).png" alt="Shop Website 3"></div>
-              <div class="gallery-item"><img src="web/1 (4).png" alt="Shop Website 4"></div>
-              <div class="gallery-item"><img src="web/1 (5).png" alt="Shop Website 5"></div>
-              <div class="gallery-item"><img src="web/1 (6).png" alt="Shop Website 6"></div>
-              <div class="gallery-item"><img src="web/1 (7).png" alt="Shop Website 7"></div>
-              <div class="gallery-item"><img src="web/1 (8).png" alt="Shop Website 8"></div>
-              <div class="gallery-item"><img src="web/1 (9).png" alt="Shop Website 9"></div>
-              <div class="gallery-item"><img src="web/1 (10).png" alt="Shop Website 10"></div>
-              <div class="gallery-item"><img src="web/1 (11).png" alt="Shop Website 11"></div>
-              <div class="gallery-item"><img src="web/1 (12).png" alt="Shop Website 12"></div>
-              <div class="gallery-item"><img src="web/1 (13).png" alt="Shop Website 13"></div>
-              <div class="gallery-item"><img src="web/1 (14).png" alt="Shop Website 14"></div>
-              <div class="gallery-item"><img src="web/1 (15).png" alt="Shop Website 15"></div>
-              <div class="gallery-item"><img src="web/1 (16).png" alt="Shop Website 16"></div>
-              <div class="gallery-item"><img src="web/1 (17).png" alt="Shop Website 17"></div>
-              <div class="gallery-item"><img src="web/1 (18).png" alt="Shop Website 18"></div>
-              <div class="gallery-item"><img src="web/1 (19).png" alt="Shop Website 19"></div>
-              <div class="gallery-item"><img src="web/1 (20).png" alt="Shop Website 20"></div>
-              <div class="gallery-item"><img src="web/1 (21).png" alt="Shop Website 21"></div>
-              <div class="gallery-item"><img src="web/1 (22).png" alt="Shop Website 22"></div>
-              <div class="gallery-item"><img src="web/1 (23).png" alt="Shop Website 23"></div>
-              <div class="gallery-item"><img src="web/1 (24).png" alt="Shop Website 24"></div>
-              <div class="gallery-item"><img src="web/1 (25).png" alt="Shop Website 25"></div>
-              <div class="gallery-item"><img src="web/1 (26).png" alt="Shop Website 26"></div>
-              <div class="gallery-item"><img src="web/1 (27).png" alt="Shop Website 27"></div>
-              <div class="gallery-item"><img src="web/1 (28).png" alt="Shop Website 28"></div>
-              <div class="gallery-item"><img src="web/1 (29).png" alt="Shop Website 29"></div>
+              <div class="gallery-item"><img src="web/1 (1).png" alt="Shop Website 1" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (2).png" alt="Shop Website 2" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (3).png" alt="Shop Website 3" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (4).png" alt="Shop Website 4" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (5).png" alt="Shop Website 5" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (6).png" alt="Shop Website 6" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (7).png" alt="Shop Website 7" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (8).png" alt="Shop Website 8" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (9).png" alt="Shop Website 9" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (10).png" alt="Shop Website 10" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (11).png" alt="Shop Website 11" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (12).png" alt="Shop Website 12" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (13).png" alt="Shop Website 13" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (14).png" alt="Shop Website 14" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (15).png" alt="Shop Website 15" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (16).png" alt="Shop Website 16" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (17).png" alt="Shop Website 17" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (18).png" alt="Shop Website 18" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (19).png" alt="Shop Website 19" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (20).png" alt="Shop Website 20" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (21).png" alt="Shop Website 21" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (22).png" alt="Shop Website 22" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (23).png" alt="Shop Website 23" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (24).png" alt="Shop Website 24" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (25).png" alt="Shop Website 25" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (26).png" alt="Shop Website 26" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (27).png" alt="Shop Website 27" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (28).png" alt="Shop Website 28" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (29).png" alt="Shop Website 29" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -282,7 +299,7 @@
         <!-- Data Dashboard -->
         <div class="project-card" id="dashboard-project">
           <div class="project-image">
-            <img src="dash/1.png" alt="Data Dashboard">
+            <img src="dash/1.png" alt="Data Dashboard" loading="lazy">
             <div class="project-overlay">
               <a href="#dash-gallery" class="project-link gallery-trigger">
                 <i class="fas fa-images"></i>
@@ -304,11 +321,11 @@
           <div id="dash-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="dash/1.png" alt="Dashboard 1"></div>
-              <div class="gallery-item"><img src="dash/2.png" alt="Dashboard 2"></div>
-              <div class="gallery-item"><img src="dash/3.png" alt="Dashboard 3"></div>
-              <div class="gallery-item"><img src="dash/4.png" alt="Dashboard 4"></div>
-              <div class="gallery-item"><img src="dash/5.png" alt="Dashboard 5"></div>
+              <div class="gallery-item"><img src="dash/1.png" alt="Dashboard 1" loading="lazy"></div>
+              <div class="gallery-item"><img src="dash/2.png" alt="Dashboard 2" loading="lazy"></div>
+              <div class="gallery-item"><img src="dash/3.png" alt="Dashboard 3" loading="lazy"></div>
+              <div class="gallery-item"><img src="dash/4.png" alt="Dashboard 4" loading="lazy"></div>
+              <div class="gallery-item"><img src="dash/5.png" alt="Dashboard 5" loading="lazy"></div>
             </div>
           </div>
         </div>
@@ -317,7 +334,7 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="section">
+  <section id="skills" class="section" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">My <span>Skills</span></h2>
       <p class="section-subtitle">Technologies and tools I work with</p>
@@ -468,7 +485,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section bg-light">
+  <section id="contact" class="section bg-light" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Get In <span>Touch</span></h2>
       <p class="section-subtitle">Feel free to reach out for collaborations or just a friendly hello</p>
@@ -517,20 +534,21 @@
         </div>
         
         <div class="contact-form">
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
             <div class="form-group">
-              <input type="text" id="name" placeholder="Your Name" required>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <input type="email" id="email" placeholder="Your Email" required>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <input type="text" id="subject" placeholder="Subject">
+              <input type="text" id="subject" name="subject" placeholder="Subject">
             </div>
             <div class="form-group">
-              <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
+            <div id="form-status" class="form-status"></div>
           </form>
         </div>
       </div>
@@ -567,6 +585,7 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
