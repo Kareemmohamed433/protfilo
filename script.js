@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Typed.js for Hero Section
   new Typed('.typing-text', {
-    strings: ['AI Engineer', 'Machine Learning Engineer', 'IoT Developer'],
+    strings: ['AI Engineer', 'IoT Developer'],
     typeSpeed: 100,
     backSpeed: 50,
     loop: true
