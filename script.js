@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Typed.js for Hero Section
   new Typed('.typing-text', {
-    strings: ['AI Enthusiast', 'Software Engineer', 'IoT Developer'],
+    strings: ['AI Engineer', 'Machine Learning Engineer', 'IoT Developer'],
     typeSpeed: 100,
     backSpeed: 50,
     loop: true
@@ -42,11 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let modal = null;
   let zoomImage = null;
 
-  // Select all zoomable images (including profile image)
-  document.querySelectorAll('.zoomable').forEach((img, index) => {
+  document.querySelectorAll('.project-image img, .gallery-item img').forEach((img, index) => {
     images.push(img.src);
-    img.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent triggering the animated-border toggle
+    img.addEventListener('click', () => {
       currentImageIndex = images.indexOf(img.src);
       showZoomImage(img.src);
     });
@@ -103,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Animated Border Design for Person Image
   const profileImg = document.querySelector('.profile-img');
-  profileImg.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent bubbling to other click handlers
+  profileImg.addEventListener('click', () => {
     profileImg.classList.toggle('animated-border');
-  });
+  }); 
 });
