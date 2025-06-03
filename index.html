@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,17 +13,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Dark Mode Toggle -->
-  <div class="dark-mode-toggle">
-    <input type="checkbox" id="darkModeToggle">
-    <label for="darkModeToggle" class="toggle-label">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-      <span class="toggle-ball"></span>
-    </label>
+  <!-- Chat Icon -->
+  <div class="chat-icon" id="chatIcon" title="Chat with AI Assistant">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="chat-container" id="chatContainer">
+    <div class="chat-header">
+      <h3 id="chatTitle">AI Assistant</h3>
+      <button class="close-chat" id="closeChat">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chat-box" id="chatBox">
+      <div class="message bot-message">
+        <img src="person/kareem.jpeg" alt="Kareem Mohamed" class="chat-image" loading="lazy" onerror="this.src='https://via.placeholder.com/300';">
+        <span id="welcomeMessage">Hello! How can I assist you today?</span>
+        <span class="message-time"></span>
+      </div>
+    </div>
+    <div class="input-area">
+      <textarea name="text" id="chatInput" placeholder="Type your message..." required></textarea>
+      <button id="sendMessage">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </div>
+    <div class="chat-options">
+      <button class="quick-reply" data-message="Tell me about your projects">Projects</button>
+      <button class="quick-reply" data-message="Download CV">CV</button>
+      <button class="quick-reply" data-message="Contact info">Contact</button>
+    </div>
+  </div>
+
+  <!-- LinkedIn Modal -->
+  <div class="linkedin-modal" id="linkedinModal">
+    <div class="linkedin-modal-content">
+      <span class="close-linkedin" id="closeLinkedin">&times;</span>
+      <h3>Kareem Mohamed - Professional Profile</h3>
+      <img src="person/kareem.jpeg" alt="Kareem Mohamed" class="modal-image" loading="lazy" onerror="this.src='https://via.placeholder.com/300';">
+      <p>I’m a passionate AI & Software Engineer with expertise in Machine Learning, Computer Vision, and IoT systems. Currently pursuing a Bachelor's degree in Artificial Intelligence at Menoufia University (Class of 2026, GPA 3.20).</p>
+      <h4>Key Skills</h4>
+      <ul>
+        <li>Machine Learning & Deep Learning (TensorFlow, PyTorch)</li>
+        <li>Computer Vision (OpenCV, CNN)</li>
+        <li>IoT Development (ESP32, SinricPro, CloudAMQP)</li>
+        <li>Web Development (HTML, CSS, JavaScript, Flask)</li>
+        <li>Data Visualization (Matplotlib, Seaborn, Streamlit)</li>
+      </ul>
+      <a href="https://www.linkedin.com/in/kareem-mohamed-47a819305/" target="_blank" class="btn btn-primary">Visit LinkedIn Profile</a>
+    </div>
   </div>
 
   <!-- Navigation -->
@@ -46,7 +88,7 @@
           </div>
         </div>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href=="#contact">Contact</a>
         <a href="kareem.pdf" download class="cv-link">Download CV</a>
       </div>
       <div class="mobile-menu-btn">
@@ -81,7 +123,7 @@
       <div class="about-content">
         <div class="about-image">
           <div class="image-wrapper">
-            <img src="person/kareem.jpeg" alt="Kareem Mohamed Portrait" class="profile-img" loading="lazy">
+            <img src="person/kareem.jpeg" alt="Kareem Mohamed Portrait" class="profile-img" loading="lazy" onerror="this.src='https://via.placeholder.com/300';">
             <div class="image-border"></div>
             <div class="image-hover-effect"></div>
           </div>
@@ -112,7 +154,7 @@
             <a href="mailto:km0848230@gmail.com" class="social-link email">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com/in/kareem-mohamed-47a819305/" target="_blank" class="social-link linkedin">
+            <a href="#" class="social-link linkedin" id="linkedinTrigger">
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://github.com/Kareemmohamed433" target="_blank" class="social-link github">
@@ -134,7 +176,7 @@
         <!-- Face Recognition -->
         <div class="project-card" id="face-project">
           <div class="project-image">
-            <img src="at/1 (1).png" alt="Face Recognition System Screenshot" loading="lazy">
+            <img src="at/1 (1).png" alt="Face Recognition System Screenshot" loading="lazy" onerror="this.src='https://via.placeholder.com/200';">
             <div class="project-overlay">
               <a href="https://github.com/Kareemmohamed433/attendanceprogram" target="_blank" class="project-link">
                 <i class="fas fa-code"></i>
@@ -159,19 +201,19 @@
           <div id="face-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="at/1 (1).png" alt="Face Recognition 1" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (2).png" alt="Face Recognition 2" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (3).png" alt="Face Recognition 3" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (4).png" alt="Face Recognition 4" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (5).png" alt="Face Recognition 5" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (6).png" alt="Face Recognition 6" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (7).png" alt="Face Recognition 7" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (8).png" alt="Face Recognition 8" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (9).png" alt="Face Recognition 9" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (10).png" alt="Face Recognition 10" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (11).png" alt="Face Recognition 11" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (12).png" alt="Face Recognition 12" loading="lazy"></div>
-              <div class="gallery-item"><img src="at/1 (13).png" alt="Face Recognition 13" loading="lazy"></div>
+              <div class="gallery-item"><img src="at/1 (1).png" alt="Face Recognition 1" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (2).png" alt="Face Recognition 2" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (3).png" alt="Face Recognition 3" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (4).png" alt="Face Recognition 4" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (5).png" alt="Face Recognition 5" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (6).png" alt="Face Recognition 6" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (7).png" alt="Face Recognition 7" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (8).png" alt="Face Recognition 8" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (9).png" alt="Face Recognition 9" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (10).png" alt="Face Recognition 10" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (11).png" alt="Face Recognition 11" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (12).png" alt="Face Recognition 12" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="at/1 (13).png" alt="Face Recognition 13" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
             </div>
           </div>
         </div>
@@ -179,7 +221,7 @@
         <!-- Potato Leaf Detection -->
         <div class="project-card" id="potato-project">
           <div class="project-image">
-            <img src="pota/1.JPG" alt="Potato Leaf Detection" loading="lazy">
+            <img src="pota/1.JPG" alt="Potato Leaf Detection" loading="lazy" onerror="this.src='https://via.placeholder.com/200';">
             <div class="project-overlay">
               <a href="https://github.com/Kareemmohamed433/detect_potato/blob/main/classfication_the_image.ipynb" target="_blank" class="project-link">
                 <i class="fas fa-code"></i>
@@ -201,7 +243,7 @@
         <!-- ESP32 IoT System -->
         <div class="project-card" id="esp-project">
           <div class="project-image">
-            <img src="iot/1.png" alt="ESP32 IoT System" loading="lazy">
+            <img src="iot/1.png" alt="ESP32 IoT System" loading="lazy" onerror="this.src='https://via.placeholder.com/200';">
             <div class="project-overlay">
               <a href="https://github.com/Kareemmohamed433/smarthome" target="_blank" class="project-link">
                 <i class="fas fa-code"></i>
@@ -229,8 +271,8 @@
           <div id="iot-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="iot/1.png" alt="IoT System 1" loading="lazy"></div>
-              <div class="gallery-item"><img src="iot/2.png" alt="IoT System 2" loading="lazy"></div>
+              <div class="gallery-item"><img src="iot/1.png" alt="IoT System 1" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="iot/2.png" alt="IoT System 2" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
             </div>
           </div>
         </div>
@@ -238,7 +280,7 @@
         <!-- Shop Website -->
         <div class="project-card" id="website-project">
           <div class="project-image">
-            <img src="web/1 (2).png" alt="Shop Website" loading="lazy">
+            <img src="web/1 (2).png" alt="Shop Website" loading="lazy" onerror="this.src='https://via.placeholder.com/200';">
             <div class="project-overlay">
               <a href="https://drive.google.com/drive/folders/1g12XKBTCF49xgMm7xN8OdW4Bq4g0RRQM?usp=sharing" target="_blank" class="project-link">
                 <i class="fas fa-video"></i>
@@ -263,35 +305,35 @@
           <div id="web-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="web/1 (1).png" alt="Shop Website 1" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (2).png" alt="Shop Website 2" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (3).png" alt="Shop Website 3" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (4).png" alt="Shop Website 4" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (5).png" alt="Shop Website 5" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (6).png" alt="Shop Website 6" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (7).png" alt="Shop Website 7" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (8).png" alt="Shop Website 8" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (9).png" alt="Shop Website 9" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (10).png" alt="Shop Website 10" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (11).png" alt="Shop Website 11" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (12).png" alt="Shop Website 12" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (13).png" alt="Shop Website 13" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (14).png" alt="Shop Website 14" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (15).png" alt="Shop Website 15" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (16).png" alt="Shop Website 16" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (17).png" alt="Shop Website 17" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (18).png" alt="Shop Website 18" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (19).png" alt="Shop Website 19" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (20).png" alt="Shop Website 20" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (21).png" alt="Shop Website 21" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (22).png" alt="Shop Website 22" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (23).png" alt="Shop Website 23" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (24).png" alt="Shop Website 24" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (25).png" alt="Shop Website 25" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (26).png" alt="Shop Website 26" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (27).png" alt="Shop Website 27" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (28).png" alt="Shop Website 28" loading="lazy"></div>
-              <div class="gallery-item"><img src="web/1 (29).png" alt="Shop Website 29" loading="lazy"></div>
+              <div class="gallery-item"><img src="web/1 (1).png" alt="Shop Website 1" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (2).png" alt="Shop Website 2" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (3).png" alt="Shop Website 3" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (4).png" alt="Shop Website 4" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (5).png" alt="Shop Website 5" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (6).png" alt="Shop Website 6" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (7).png" alt="Shop Website 7" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (8).png" alt="Shop Website 8" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (9).png" alt="Shop Website 9" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (10).png" alt="Shop Website 10" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (11).png" alt="Shop Website 11" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (12).png" alt="Shop Website 12" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (13).png" alt="Shop Website 13" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (14).png" alt="Shop Website 14" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (15).png" alt="Shop Website 15" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (16).png" alt="Shop Website 16" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (17).png" alt="Shop Website 17" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (18).png" alt="Shop Website 18" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (19).png" alt="Shop Website 19" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (20).png" alt="Shop Website 20" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (21).png" alt="Shop Website 21" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (22).png" alt="Shop Website 22" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (23).png" alt="Shop Website 23" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (24).png" alt="Shop Website 24" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (25).png" alt="Shop Website 25" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (26).png" alt="Shop Website 26" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (27).png" alt="Shop Website 27" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (28).png" alt="Shop Website 28" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="web/1 (29).png" alt="Shop Website 29" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
             </div>
           </div>
         </div>
@@ -299,7 +341,7 @@
         <!-- Data Dashboard -->
         <div class="project-card" id="dashboard-project">
           <div class="project-image">
-            <img src="dash/1.png" alt="Data Dashboard" loading="lazy">
+            <img src="dash/1.png" alt="Data Dashboard" loading="lazy" onerror="this.src='https://via.placeholder.com/200';">
             <div class="project-overlay">
               <a href="#dash-gallery" class="project-link gallery-trigger">
                 <i class="fas fa-images"></i>
@@ -321,11 +363,11 @@
           <div id="dash-gallery" class="project-gallery">
             <h4>Project Gallery</h4>
             <div class="gallery-container">
-              <div class="gallery-item"><img src="dash/1.png" alt="Dashboard 1" loading="lazy"></div>
-              <div class="gallery-item"><img src="dash/2.png" alt="Dashboard 2" loading="lazy"></div>
-              <div class="gallery-item"><img src="dash/3.png" alt="Dashboard 3" loading="lazy"></div>
-              <div class="gallery-item"><img src="dash/4.png" alt="Dashboard 4" loading="lazy"></div>
-              <div class="gallery-item"><img src="dash/5.png" alt="Dashboard 5" loading="lazy"></div>
+              <div class="gallery-item"><img src="dash/1.png" alt="Dashboard 1" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="dash/2.png" alt="Dashboard 2" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="dash/3.png" alt="Dashboard 3" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="dash/4.png" alt="Dashboard 4" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
+              <div class="gallery-item"><img src="dash/5.png" alt="Dashboard 5" loading="lazy" onerror="this.src='https://via.placeholder.com/150';"></div>
             </div>
           </div>
         </div>
@@ -518,7 +560,7 @@
             </div>
             <div class="contact-details">
               <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/kareem-mohamed-47a819305/" target="_blank">Kareem Mohamed</a>
+              <a href="#" id="linkedinTriggerContact">Kareem Mohamed</a>
             </div>
           </div>
           
@@ -547,13 +589,21 @@
             <div class="form-group">
               <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary">
+              <span class="submit-text">Send Message</span>
+              <span class="spinner" style="display: none;"><i class="fas fa-spinner fa-spin"></i></span>
+            </button>
             <div id="form-status" class="form-status"></div>
           </form>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -571,14 +621,14 @@
           <a href="kareem.pdf" download>Download CV</a>
         </div>
         <div class="footer-social">
-          <a href="https://www.linkedin.com/in/kareem-mohamed-47a819305/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/Kareemmohamed433" target="_blank"><i class="fab fa-github"></i></a>
           <a href="https://wa.me/201022957599" target="_blank"><i class="fab fa-whatsapp"></i></a>
           <a href="mailto:km0848230@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="#" id="linkedinTriggerFooter"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Kareemmohamed433" target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Kareem Mohamed. All rights reserved.</p>
+        <p>© <span id="currentYear"></span> Kareem Mohamed. All rights reserved.</p>
       </div>
     </div>
   </footer>
